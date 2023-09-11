@@ -79,16 +79,16 @@ public class PetService {
             Toy toy = toyRepository.findById(toyId).get();
 
             petBeingPlayedWith.setHappinessLevel(petBeingPlayedWith.getHappinessLevel() + toy.getHappinessValue());
-            petBeingPlayedWith.removeToy(toy);
+
             petRepository.save(petBeingPlayedWith);
     }
 
     public void feedPet(Long foodId, Long petId){
         Pet petBeingFed = petRepository.findById(petId).get();
-        Food food= foodRepository.findById(foodId).get();
+        Food food = foodRepository.findById(foodId).get();
 
-        petBeingFed.setEnergyLevel(petBeingFed.getEnergyLevel()+food.getNutritionValue());
-        petBeingFed.removeFood(food);
+        petBeingFed.setEnergyLevel(petBeingFed.getEnergyLevel()+ food.getNutritionValue());
+
         petRepository.save(petBeingFed);
     }
 
