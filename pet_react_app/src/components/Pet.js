@@ -67,6 +67,7 @@ const Pet = ({ pet }) => {
               <li key={index}>{food.name} - {food.nutritionValue}</li>
             ))}
         </ul>
+        {/* <button>Interact </button> */}
         <button>Play with me</button>
         <button>Feed me</button>
     </div>
