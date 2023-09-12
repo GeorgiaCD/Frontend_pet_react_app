@@ -53,7 +53,7 @@ public class PetService {
         petToUpdate.setSpecies(petDTO.getSpecies());
         petToUpdate.setHappinessLevel(petDTO.getHappinessLevel());
         petToUpdate.setEnergyLevel(petDTO.getEnergyLevel());
-        petToUpdate.setId(petDTO.getUserId());
+        petToUpdate.setUser(userRepository.findById(petDTO.getUserId()).get());
         petToUpdate.setFoods(new ArrayList<>());
 
         for (Long id: petDTO.getFoodIds()){
@@ -79,20 +79,20 @@ public class PetService {
             Toy toy = toyRepository.findById(toyId).get();
 
             petBeingPlayedWith.setHappinessLevel(petBeingPlayedWith.getHappinessLevel() + toy.getHappinessValue());
-            petBeingPlayedWith.removeToy(toy);
+
             petRepository.save(petBeingPlayedWith);
     }
 
     public void feedPet(Long foodId, Long petId){
         Pet petBeingFed = petRepository.findById(petId).get();
-        Food food= foodRepository.findById(foodId).get();
+        Food food = foodRepository.findById(foodId).get();
 
-        petBeingFed.setEnergyLevel(petBeingFed.getEnergyLevel()+food.getNutritionValue());
-        petBeingFed.removeFood(food);
+        petBeingFed.setEnergyLevel(petBeingFed.getEnergyLevel()+ food.getNutritionValue());
+
         petRepository.save(petBeingFed);
     }
 
-    @Scheduled(fixedRate = 15000) //note: 15000 = 15 seconds
+    @Scheduled(fixedRate = 1200000) //note: 15000 = 15 seconds
     public void autoDecrease() {
         for (Pet petDecreasing : petRepository.findAll()) {
             petDecreasing.setEnergyLevel(petDecreasing.getEnergyLevel() - 2);
