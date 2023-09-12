@@ -24,8 +24,6 @@ useEffect( () => {
 
    return(<>
 
-
-
         {
             loggedInUser
             ? (<UserPetList loggedInUser={loggedInUser} />) 
