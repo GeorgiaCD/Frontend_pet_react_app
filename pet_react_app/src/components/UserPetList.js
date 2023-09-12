@@ -1,12 +1,13 @@
 import Pet from "./Pet";
 
 
-const UserPetList = ({loggedInUser}) =>{
+const UserPetList = ({loggedInUser, feedPet}) =>{
 
     const petComponent = loggedInUser.pets ? loggedInUser.pets.map( pet =>{
         return <Pet
-        key = {pet.id}
         pet = {pet}
+        loggedInUser={loggedInUser}
+        feedPet={feedPet}
         />
     }) : null;
 

@@ -1,8 +1,11 @@
 .App {
   text-align: center;
+
 }
 
-/* Pet.css */
+
+
+/* Pet health bars */
 .progress {
   height: 20px;
   font-size: 15px;
@@ -20,3 +23,5 @@
   color: white;
   font-weight: bold;
 }
+
+

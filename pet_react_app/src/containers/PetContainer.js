@@ -12,6 +12,15 @@ const fetchUserData = async () => {
 
 }
 
+const feedPet = async (petId) => {
+        const response = await fetch(`http://localhost:8080/pets/${petId}/feed?foodId=1`, {
+          method: 'PATCH',
+          headers: {
+            'Content-Type': 'application/json',
+            
+          },
+        });}
+
 
 useEffect( () => {
    
@@ -26,7 +35,7 @@ useEffect( () => {
 
         {
             loggedInUser
-            ? (<UserPetList loggedInUser={loggedInUser} />) 
+            ? (<UserPetList feedPet={feedPet} loggedInUser={loggedInUser} />) 
             : (<p>Loading...</p>)
         }
 
@@ -36,5 +45,4 @@ useEffect( () => {
 
 
 }
-
 export default PetContainer;

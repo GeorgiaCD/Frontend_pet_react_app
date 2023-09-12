@@ -1,9 +1,16 @@
 
-const Pet = ({ pet }) => {
+const Pet = ({pet, loggedInUser, feedPet}) => {
   if (!pet) {
     return <h2>No pets available</h2>;
   }
+const handleFeed = (petId) =>{
+  if (pet.energyLevel <= 80){
+    feedPet(petId)
+  }
 
+
+
+}
   
   const happinessBarColor =
   pet.happinessLevel < 26 ? "red" :"#4caf50"; 
@@ -13,9 +20,9 @@ const Pet = ({ pet }) => {
 
   return (
     <div className="pet">
-      <h2>{pet.name}</h2>
+      <h2 className="pet-name">{pet.name}</h2>
       <img src={`/pet_${pet.species}.webp`} ></img>
-      <h3>{pet.species}</h3>
+      <h3 className="pet-specie">{pet.species}</h3>
       
       <div className="happiness-bar" >
       <p>Happiness level: {pet.happinessLevel}/100</p>
@@ -25,13 +32,13 @@ const Pet = ({ pet }) => {
           role="progressbar"
           style={{
             width: `${pet.happinessLevel}%`,
-            backgroundColor: happinessBarColor, // Set background color
+            backgroundColor: happinessBarColor, 
           }}
           aria-valuenow={pet.happinessLevel}
           aria-valuemin="0"
           aria-valuemax="100"
         >
-          {pet.energyLevel}
+          {pet.happinessLevel}
         </div>
       </div>
       </div>
@@ -68,7 +75,7 @@ const Pet = ({ pet }) => {
             ))}
         </ul>
         <button>Play with me</button>
-        <button>Feed me</button>
+        <button onClick={() => handleFeed(pet.id)}>Feed me</button>
     </div>
     
   );
