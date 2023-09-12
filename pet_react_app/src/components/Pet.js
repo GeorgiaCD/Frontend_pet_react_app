@@ -1,3 +1,4 @@
+
 const Pet = ({ pet }) => {
   if (!pet) {
     return <h2>No pets available</h2>;
@@ -13,6 +14,7 @@ const Pet = ({ pet }) => {
   return (
     <div className="pet">
       <h2>{pet.name}</h2>
+      <img src={`/pet_${pet.species}.webp`} ></img>
       <h3>{pet.species}</h3>
       
       <div className="happiness-bar" >
@@ -65,7 +67,10 @@ const Pet = ({ pet }) => {
               <li key={index}>{food.name} - {food.nutritionValue}</li>
             ))}
         </ul>
+        <button>Play with me</button>
+        <button>Feed me</button>
     </div>
+    
   );
 };
 
