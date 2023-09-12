@@ -5,6 +5,7 @@ const Pet = ({ loggedInUser }) => {
   
     return (
       <>
+      
         <h2>{loggedInUser.pets[0].name}</h2>
         <h3> {loggedInUser.pets[0].species}</h3>
 
