@@ -23,9 +23,17 @@ useEffect( () => {
 
 
    return(<>
-        <UserPetList loggedInUser={loggedInUser}/>
-   </>)
 
+
+
+        {
+            loggedInUser
+            ? (<UserPetList loggedInUser={loggedInUser} />) 
+            : (<p>Loading...</p>)
+        }
+
+        
+   </>)
 
 
 
