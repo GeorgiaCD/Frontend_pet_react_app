@@ -17,7 +17,7 @@ const fetchUserData = async () => {
 
 const updatePet = (fedPet) => {
 
-   const copiedUser = loggedInUser 
+   const copiedUser = {...loggedInUser }
 
    for (let index = 0; index < copiedUser.pets.length; index++) {
     
