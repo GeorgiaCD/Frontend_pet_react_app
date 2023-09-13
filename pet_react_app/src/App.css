@@ -81,3 +81,17 @@
 .pet-form button:hover {
   background-color: #45a049;
 }
+
+.toy-img{
+  width: 100px;
+  aspect-ratio: 1;
+}
+
+/* .toy-profile-list{
+  background-color: white;
+} */
+
+.food-img{
+  width: 100px;
+  aspect-ratio: 1;
+}

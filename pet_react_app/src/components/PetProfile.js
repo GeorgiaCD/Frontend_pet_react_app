@@ -81,14 +81,18 @@ const PetProfile = ({pets, playPet, feedPet}) => {
           <ul>
               <h3 className="list-title">Toys</h3>
               {foundPet.toys.map((toy, index) => (
-                <li key={index}>{toy.name} - {toy.happinessValue}</li>
+                <div key={index}>
+                  <img className="toy-img" src ={`/List_Images/toy_${toy.name}.png`} ></img>
+                  {toy.name} - {toy.happinessValue}</div>
               ))}
           </ul>
       </div>
           <ul>
               <h3>Foods</h3>
               {foundPet.foods.map((food, index) => (
-                <li key={index}>{food.name} - {food.nutritionValue}</li>
+                <div key={index}>
+                  <img className="food-img" src ={`/List_Images/food_${food.name}.png`} ></img>
+                  {food.name} - {food.nutritionValue}</div>
               ))}
           </ul>
          
