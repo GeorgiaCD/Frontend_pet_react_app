@@ -67,6 +67,7 @@ function App() {
     <div className="App">
         {/* <NavLink to="/">Home</NavLink> */}
         <h1>Pets!</h1>
+        <img src = "/cat.gif" />
         <Routes>
           <Route index element={<PetContainer feedPet={feedPet} loggedInUser={loggedInUser} pets={pets}/>}></Route>
           <Route path='/pet/:id' element={<PetProfile pets={pets} />}></Route>
