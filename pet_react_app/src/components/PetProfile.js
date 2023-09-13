@@ -1,16 +1,28 @@
-import {Link} from "react-router-dom";
+import { useState, useEffect} from "react";
+import {Link, useParams } from "react-router-dom";
+
 
 const PetProfile = ({pet, loggedInUser, feedPet}) => {
-    if (!pet) {
+
+const [petProfile, setPetProfile] = useState(null)
+  
+const{id} = useParams(); //matches :id in the router tags
+  
+useEffect(() => {
+  console.log(loggedInUser);
+  // const foundPet = loggedInUser.pets.find((pet) => pet.id==id)
+  // setPetProfile({...foundPet})
+  // console.log(foundPet);
+},[])
+
+  if (!pet) {
       return <h2>No pets available</h2>;
     }
+
   const handleFeed = (petId) =>{
     if (pet.energyLevel <= 80){
       feedPet(petId)
     }
-  
-  
-  
   }
     
     const happinessBarColor =
