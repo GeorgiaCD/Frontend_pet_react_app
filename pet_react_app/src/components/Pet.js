@@ -1,6 +1,6 @@
 import {Link} from "react-router-dom";
 
-const Pet = ({pet, loggedInUser, feedPet}) => {
+const Pet = ({pet, feedPet}) => {
   if (!pet) {
     return <h2>No pets available</h2>;
   }
@@ -8,6 +8,11 @@ const handleFeed = (petId) =>{
   if (pet.energyLevel <= 80){
     feedPet(petId)
   }
+
+// const handlePlay = (petId) =>{
+//   if (pet.happinessLevel <= 80){
+//     playPet(petId)
+//   }
 
 
 
@@ -63,28 +68,12 @@ const handleFeed = (petId) =>{
       </div>
     </div>
 
-      <div className="toy-list">
-        <ul>
-            <h3 className="list-title">Toys</h3>
-            {pet.toys.map((toy, index) => (
-              <li key={index}>{toy.name} - {toy.happinessValue}</li>
-            ))}
-        </ul>
-      </div>
-
-      <div className="food-list">
-        <ul>
-            <h3 className="list-title">Foods</h3>
-            {pet.foods.map((food, index) => (
-              <li key={index}>{food.name} - {food.nutritionValue}</li>
-            ))}
-        </ul>
-      </div>
-        <button id="feed-button" onClick={() => handleFeed(pet.id)}>Feed me</button>
+      
         <Link to={"/pet/"+pet.id}>Interact</Link>
     </div>
     
   );
 };
+
 
 export default Pet;

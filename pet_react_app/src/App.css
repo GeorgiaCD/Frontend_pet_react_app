@@ -3,6 +3,7 @@
 
 }
 
+
 .pet{
   width: calc(33.33% - 20px); /* Set a fixed width for three books per row */
   margin: 0 0 20px; /* Adjust margin as needed */
