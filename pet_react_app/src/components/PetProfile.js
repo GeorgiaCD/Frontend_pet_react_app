@@ -1,17 +1,29 @@
-import {Link} from "react-router-dom";
+import { useState, useEffect} from "react";
+import {Link, useParams } from "react-router-dom";
 
-const PetProfile = ({pet, loggedInUser, feedPet}) => {
-    if (!pet) {
-      return <h2>No pets available</h2>;
+
+const PetProfile = ({pets}) => {
+
+const [pet, setPet] = useState(null)
+  
+const{id} = useParams(); //matches :id in the router tags
+  
+useEffect(() => {
+  
+  const foundPet = pets.find((pet) => pet.id==id)
+  setPet(foundPet)
+  console.log(foundPet);
+},[])
+
+  if (!pet) {
+      return <h2 className="no-pets-message">No pets available</h2>;
     }
-  const handleFeed = (petId) =>{
-    if (pet.energyLevel <= 80){
-      feedPet(petId)
-    }
-  
-  
-  
-  }
+
+  // const handleFeed = (petId) =>{
+  //   if (pet.energyLevel <= 80){
+  //     feedPet(petId)
+  //   }
+  // }
     
     const happinessBarColor =
     pet.happinessLevel < 26 ? "red" :"#4caf50"; 
@@ -22,11 +34,11 @@ const PetProfile = ({pet, loggedInUser, feedPet}) => {
     return (
       <div className="pet">
         <h2 className="pet-name">{pet.name}</h2>
-        <img src={`/pet_${pet.species}.webp`} ></img>
+        <img className= "pet-profile-image" src={`/pet_${pet.species}.webp`} ></img>
         <h3 className="pet-specie">{pet.species}</h3>
         
         <div className="happiness-bar" >
-        <p>Happiness level: {pet.happinessLevel}/100</p>
+        <p className="happiness-bar-text">Happiness level: {pet.happinessLevel}/100</p>
         <div className="progress">
           <div
             className="progress-bar"
@@ -45,7 +57,7 @@ const PetProfile = ({pet, loggedInUser, feedPet}) => {
         </div>
   
         <div className="energy-bar" >
-        <p>Energy level: {pet.energyLevel}/100</p>
+        <p className="energy-bar-text">Energy level: {pet.energyLevel}/100</p>
         <div className="progress">
           <div
             className="progress-bar"
@@ -62,13 +74,15 @@ const PetProfile = ({pet, loggedInUser, feedPet}) => {
           </div>
         </div>
       </div>
-  
-      <ul>
-              <h3>Toys</h3>
+
+      <div className="toy-profile-list">
+          <ul>
+              <h3 className="list-title">Toys</h3>
               {pet.toys.map((toy, index) => (
                 <li key={index}>{toy.name} - {toy.happinessValue}</li>
               ))}
           </ul>
+      </div>
           <ul>
               <h3>Foods</h3>
               {pet.foods.map((food, index) => (
@@ -76,7 +90,7 @@ const PetProfile = ({pet, loggedInUser, feedPet}) => {
               ))}
           </ul>
           <button>Play with me</button>
-          <button onClick={() => handleFeed(pet.id)}>Feed me</button>
+          {/* <button onClick={() => handleFeed(pet.id)}>Feed me</button> */}
           <Link to={"/"}>Back</Link>
       </div>
       

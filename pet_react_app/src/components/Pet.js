@@ -22,11 +22,11 @@ const handleFeed = (petId) =>{
   return (
     <div className="pet">
       <h2 className="pet-name">{pet.name}</h2>
-      <img src={`/pet_${pet.species}.webp`} ></img>
+      <img className="pet-image" src={`/pet_${pet.species}.webp`} ></img>
       <h3 className="pet-specie">{pet.species}</h3>
       
       <div className="happiness-bar" >
-      <p>Happiness level: {pet.happinessLevel}/100</p>
+      <p className="happiness-bar-text">Happiness level: {pet.happinessLevel}/100</p>
       <div className="progress">
         <div
           className="progress-bar"
@@ -45,7 +45,7 @@ const handleFeed = (petId) =>{
       </div>
 
       <div className="energy-bar" >
-      <p>Energy level: {pet.energyLevel}/100</p>
+      <p className="energy-bar-text">Energy level: {pet.energyLevel}/100</p>
       <div className="progress">
         <div
           className="progress-bar"
@@ -63,20 +63,25 @@ const handleFeed = (petId) =>{
       </div>
     </div>
 
-    <ul>
-            <h3>Toys</h3>
+      <div className="toy-list">
+        <ul>
+            <h3 className="list-title">Toys</h3>
             {pet.toys.map((toy, index) => (
               <li key={index}>{toy.name} - {toy.happinessValue}</li>
             ))}
         </ul>
+      </div>
+
+      <div className="food-list">
         <ul>
-            <h3>Foods</h3>
+            <h3 className="list-title">Foods</h3>
             {pet.foods.map((food, index) => (
               <li key={index}>{food.name} - {food.nutritionValue}</li>
             ))}
         </ul>
-        <button>Play with me</button>
-        <button onClick={() => handleFeed(pet.id)}>Feed me</button>
+      </div>
+        <button id="feed-button" onClick={() => handleFeed(pet.id)}>Feed me</button>
+        <Link to={"/pet/"+pet.id}>Interact</Link>
     </div>
     
   );
