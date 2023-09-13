@@ -75,8 +75,8 @@ const handleFeed = (petId) =>{
               <li key={index}>{food.name} - {food.nutritionValue}</li>
             ))}
         </ul>
-        <button>Play with me</button>
         <button onClick={() => handleFeed(pet.id)}>Feed me</button>
+        <Link to={"/pet/"+pet.id}>Interact</Link>
     </div>
     
   );
