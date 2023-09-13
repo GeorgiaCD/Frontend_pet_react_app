@@ -13,9 +13,9 @@ const UserPetList = ({loggedInUser, feedPet}) =>{
 
   
     return(
-        <>
+        <div className="pet-component">
         {petComponent}
-        </>
+        </div>
     )
 
 }

@@ -3,6 +3,7 @@ import './App.css';
 import PetContainer from './containers/PetContainer';
 import { BrowserRouter, Routes, Route, Link, NavLink } from "react-router-dom";
 import PetProfile from './components/PetProfile';
+import PetForm from './components/PetForm';
 
 function App() {
 
@@ -21,7 +22,7 @@ function App() {
 
     useEffect( () => {
       
-        fetchUserData()
+        // fetchUserData()
         console.log(loggedInUser);
 
     },[])
@@ -74,6 +75,7 @@ function App() {
         </Routes>
     </div>
     </BrowserRouter>
+    <PetForm />
     </>
   );
 }
