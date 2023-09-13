@@ -27,7 +27,7 @@ const handleFeed = (petId) =>{
   return (
     <div className="pet">
       <h2 className="pet-name">{pet.name}</h2>
-      <img className="pet-image" src={`/pet_${pet.species}.webp`} ></img>
+      <img className="pet-image" src={`pet_images/pet_${pet.species}1.gif`} ></img>
       <h3 className="pet-specie">{pet.species}</h3>
       
       <div className="happiness-bar" >

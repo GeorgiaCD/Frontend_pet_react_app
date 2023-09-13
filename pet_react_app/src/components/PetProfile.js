@@ -36,7 +36,8 @@ const PetProfile = ({pets, playPet, feedPet}) => {
     return (
       <div className="pet">
         <h2 className="pet-name">{foundPet.name}</h2>
-        <img className= "pet-profile-image" src={`/pet_${foundPet.species}.webp`} ></img>
+        {/* <img className="pet-image" src={`pet_images/pet_${pet.species}1.gif`} ></img> */}
+        <img className= "pet-profile-image" src={`/pet_images/pet_${foundPet.species}2.gif`} ></img>
         <h3 className="pet-specie">{foundPet.species}</h3>
         
         <div className="happiness-bar" >
