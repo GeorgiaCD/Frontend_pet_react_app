@@ -3,6 +3,7 @@ import './App.css';
 import PetContainer from './containers/PetContainer';
 import { BrowserRouter, Routes, Route, Link, NavLink } from "react-router-dom";
 import PetProfile from './components/PetProfile';
+import PetForm from './components/PetForm';
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
     const response = await fetch("http://localhost:8080/users/5");
     const data = await response.json();
     setLoggedInUser(data)
+    console.log(loggedInUser);
     setPets(data.pets)
 
   }
@@ -22,7 +24,7 @@ function App() {
     useEffect( () => {
       
         fetchUserData()
-        console.log(loggedInUser);
+        
 
     },[])
 
@@ -32,19 +34,24 @@ function App() {
     const updatePet = (fedPet) => {
 
       const copiedUser = {...loggedInUser }
+      
    
       for (let index = 0; index < copiedUser.pets.length; index++) {
        
        if(fedPet.id === copiedUser.pets[index].id){
            copiedUser.pets.splice(index, 1, fedPet)
        }
-     
       }
+      
+      const copiedPets = [...copiedUser.pets]
       setLoggedInUser(copiedUser)
+      setPets(copiedPets)
       console.log( "copied user: ", copiedUser);
-   
-       
+     
    }
+
+
+
    
    const feedPet = async (petId) => {
            const response = await fetch(`http://localhost:8080/pets/${petId}/feed?foodId=1`, {
@@ -59,6 +66,22 @@ function App() {
            updatePet(data.body);
            } 
 
+   const playPet = async (petId) => {
+           const response = await fetch(`http://localhost:8080/pets/${petId}/play?toyId=1`, {
+             method: 'PATCH',
+             headers: {
+               'Content-Type': 'application/json',
+   
+             },
+           })
+           const data = await response.json()
+               console.log("data: ", data);
+           updatePet(data.body);
+           } 
+
+
+
+
   return (
     <>
     <h2>Virtual Pet</h2>
@@ -67,12 +90,14 @@ function App() {
     <div className="App">
         {/* <NavLink to="/">Home</NavLink> */}
         <h1>Pets!</h1>
+        {/* <img src = "/cat.gif" /> */}
         <Routes>
-          <Route index element={<PetContainer feedPet={feedPet} loggedInUser={loggedInUser} pets={pets}/>}></Route>
-          <Route path='/pet/:id' element={<PetProfile loggedInUser={loggedInUser} />}></Route>
+          <Route index element={<PetContainer playPet={playPet} feedPet={feedPet} loggedInUser={loggedInUser} pets={pets}/>}></Route>
+          <Route path='/pet/:id' element={<PetProfile  playPet={playPet} feedPet={feedPet} pets={pets} />}></Route>
         </Routes>
     </div>
     </BrowserRouter>
+    <PetForm />
     </>
   );
 }
