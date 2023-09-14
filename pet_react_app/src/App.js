@@ -4,7 +4,8 @@ import PetContainer from './containers/PetContainer';
 import { BrowserRouter, Routes, Route, Link, NavLink } from "react-router-dom";
 import PetProfile from './components/PetProfile';
 import PetForm from './components/PetForm';
-import NavBar from './components/NavBar';
+import About from './components/About';
+import Adoption from './components/Adoption';
 
 function App() {
 
@@ -101,6 +102,7 @@ function App() {
         <h1>Virtual Pet</h1>
         <NavLink to="/">Home</NavLink>
         <NavLink to="about">About</NavLink>
+        <NavLink to="adoption">Adoption</NavLink>
       </nav>
       <img id="banner-img" src='/banner.png'/>
     </header>
@@ -109,6 +111,8 @@ function App() {
         <Routes>
           <Route index element={<PetContainer playPet={playPet} feedPet={feedPet} loggedInUser={loggedInUser} pets={pets}/>}></Route>
           <Route path='/pet/:id' element={<PetProfile  playPet={playPet} feedPet={feedPet} pets={pets} />}></Route>
+          <Route path="about" element={<About />}></Route>
+          <Route path="adoption" element={<Adoption />}></Route>
         </Routes>
     </div>
     </BrowserRouter>
