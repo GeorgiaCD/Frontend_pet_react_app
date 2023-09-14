@@ -4,6 +4,7 @@ import PetContainer from './containers/PetContainer';
 import { BrowserRouter, Routes, Route, Link, NavLink } from "react-router-dom";
 import PetProfile from './components/PetProfile';
 import PetForm from './components/PetForm';
+import NavBar from './components/NavBar';
 
 function App() {
 
@@ -93,21 +94,25 @@ function App() {
 
   return (
     <>
-    <h2>Virtual Pet</h2>
-    {/* <PetContainer /> */}
     <BrowserRouter>
     <div className="App">
-        {/* <NavLink to="/">Home</NavLink> */}
-        <h1>Pets!</h1>
-        {deadPetMessage()}
-        {/* <img src = "/cat.gif" /> */}
+    <header>
+      <nav>
+        <h1>Virtual Pet</h1>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="about">About</NavLink>
+      </nav>
+      <img id="banner-img" src='/banner.png'/>
+    </header>
+    {deadPetMessage()}
+
         <Routes>
           <Route index element={<PetContainer playPet={playPet} feedPet={feedPet} loggedInUser={loggedInUser} pets={pets}/>}></Route>
           <Route path='/pet/:id' element={<PetProfile  playPet={playPet} feedPet={feedPet} pets={pets} />}></Route>
         </Routes>
     </div>
     </BrowserRouter>
-    <img src = "/List_Images/TechTails.png" />
+    {/* <img src = "/List_Images/TechTails.png" /> */}
     </>
   );
 }
