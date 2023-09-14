@@ -21,12 +21,12 @@ function App() {
 
   }
 
-  const deadPetMessage = () => {
-    if (pets==[]) {
-      return <p>Pets have died</p>;
+   const deadPetMessage = () => {
+            if (pets.length===0) {
+              return <p>Pets have died :( better luck next time</p>;
+            }
+            // else return <p>All pets are healthy</p>
     }
-    else {return <p>All pets are healthy</p>}
-  }
 
   
     useEffect( () => {
@@ -99,7 +99,7 @@ function App() {
     <div className="App">
         {/* <NavLink to="/">Home</NavLink> */}
         <h1>Pets!</h1>
-        <p>{deadPetMessage}</p>
+        {deadPetMessage()}
         {/* <img src = "/cat.gif" /> */}
         <Routes>
           <Route index element={<PetContainer playPet={playPet} feedPet={feedPet} loggedInUser={loggedInUser} pets={pets}/>}></Route>
