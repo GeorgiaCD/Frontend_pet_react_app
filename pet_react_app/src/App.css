@@ -1,314 +1,3 @@
-/* .App, body {
-  text-align: center;
-  font-family: 'Gochi Hand', cursive;
-  color: #5C4033;
-  background: #D3A884;
-}
-
-body {
-  margin: 0;
-  background: #D3A884;
-} 
-
-.pet{
-  width: calc(33.33% - 20px);
-  margin: 0 0 20px;
-  padding: 10px;
-  border: #333;
-}
-
-.pet-image {
-  width: 100px;
-  aspect-ratio: 1;
-
-}
-
-
-
-.pet-component{
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-
-}
-
-
-.progress {
-  height: 20px;
-  font-size: 15px;
-  width: 200px;
-  background-color: #ccc;
-  border-radius: 4px;
-  margin-top: 10px;
-}
-
-.progress-bar {
-  height: 100%;
-  border-radius: 4px;
-  text-align: center;
-  line-height: 20px;
-  color: white;
-  font-weight: bold;
-}
-
-
-
-
-.pet-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f2f2f2;
-  border-radius: 5px;
-}
-
-
-.form-title {
-  text-align: center;
-  font-size: 24px;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-
-.pet-form input[type="text"] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
-
-
-.pet-form button {
-  width: 100%;
-  padding: 10px;
-  background-color: #4caf50;
-  color: #fff;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-  font-size: 18px;
-}
-
-
-.pet-form button:hover {
-  background-color: #45a049;
-}
-
-.toy-img{
-  width: 100px;
-  aspect-ratio: 1;
-}
-
-
-
-.food-img{
-  width: 100px;
-  aspect-ratio: 1;
-}
-
-.pet-profile-image {
-  width: 100px;
-  aspect-ratio: 1;
-
-}
-
-
-
-
-
-
-
-.nav-bar {
-  background-color: #333; 
-  color: white;
-  padding: 10px 0;
-
-
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.nav-bar ul {
-  list-style-type: none; 
-  padding: 0;
-  text-align: center; 
-}
-
-.nav-bar li{
-  display: inline-block; 
-  margin: 0px 80px;
-
- 
-}
-
-
-
-.nav-bar li:hover {
-  color: #4caf50;
-  transform: scale(150%);
-  transition: all 0.3s;
-}
-
-
-
-
-
-
-#banner-img {
-  background-size: cover;
-  background-repeat: no-repeat;   
-  background-position: center;
-  width: 100%;
-}
-
-#virtual-pet-title
-{
-    font-family: 'Gochi Hand', cursive;
-}
-
-.pet{
-  width: calc(33.33% - 20px); 
-  margin: 0 0 20px; 
-  padding: 10px;
-  border: #333;
-}
-
-.pet-image {
-  width: 100px;
-  aspect-ratio: 1;
-
-}
-
-
-
-.pet-component{
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-
-}
-
-
-.progress {
-  height: 20px;
-  font-size: 15px;
-  width: 200px;
-  background-color: #FFF2E7;
-  border-radius: 4px;
-  margin-top: 10px;
-}
-
-.progress-bar {
-  height: 100%;
-  border-radius: 4px;
-  text-align: center;
-  line-height: 20px;
-  color: white;
-  font-weight: bold;
-}
-
-
-
-
-.pet-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f2f2f2;
-  border-radius: 5px;
-}
-
-
-.form-title {
-  text-align: center;
-  font-size: 24px;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-
-.pet-form input[type="text"] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
-
-
-.pet-form button {
-  width: 100%;
-  padding: 10px;
-  background-color: #4caf50;
-  color: #fff;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-  font-size: 18px;
-}
-
-
-.pet-form button:hover {
-  background-color: #45a049;
-}
-
-.toy-img{
-  width: 100px;
-  aspect-ratio: 1;
-}
-
-
-.food-img{
-  width: 100px;
-  aspect-ratio: 1;
-}
-
-.pet-profile-image {
-  width: 100px;
-  aspect-ratio: 1;
-
-}
-
-
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-
-:root {
-  --primary: #F8A09B;
-  --secondary: #E75F5E;
-}
-body {
-  margin: 0;
-  background: #D3A884;
-} 
-
-header nav {
-  display: flex;
-  gap: 16px;
-  justify-content: end;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-header nav h1 {
-  margin-right: auto;
-
-}
-header nav a{
-  text-decoration: none;
-  padding: 6px;
-  border-radius: 4px;
-}
-header nav a.active {
-  background: var(--primary);
-}
-
-.grid-container {
-  display: flex;
-}
- */
-
 .App {
   text-align: center;
   font-family: 'Gochi Hand', cursive;
@@ -323,9 +12,66 @@ header nav a.active {
   width: 100%;
 }
 
-#virtual-pet-title
-{
-    font-family: 'Gochi Hand', cursive;
+#virtual-pet-title {
+  font-family: 'Gochi Hand', cursive;
+  
+}
+
+header{
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1{
+  font-size: 5em;
+  letter-spacing: 2px;
+
+}
+
+/* nav bar styling */
+:root {
+  --primary: #F8A09B;
+  --secondary: #E75F5E;
+}
+
+/* navbar */
+header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+header nav a{
+  text-decoration: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  color: #5C4033;
+  font-size: 20px;
+
+}
+
+header nav a:hover{
+  background-color: #93563A;
+  color: white;
+  
+
+}
+
+
+header nav a.active {
+  background: var(--primary);
+  color: #5C4033;
+}
+
+.grid-container {
+  display: flex;
 }
 
 /* PET */
@@ -373,7 +119,6 @@ header nav a.active {
   line-height: 20px;
   color: white;
   font-weight: bold;
-
   margin: 0 0 20px; /* Adjust margin as needed */
   padding: 10px;
   border: #333;
@@ -381,18 +126,26 @@ header nav a.active {
 
 #interact-link {
   background-color: #E75F5E;
-  border: none;
-  border-radius: 3px;
   cursor: pointer;
   color: white;
-  padding: 5px 5px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
   text-decoration: none;
   align-content: center;
   cursor: pointer; 
   font-family: 'Montserrat', sans-serif;
   border-radius: 15px;
+}
+
+#interact-link:hover {
+  background-color: #93563A;
+
 
 }
+
+
+/* FORM */
 
 /* Style the form container */
 .pet-form {
@@ -424,18 +177,19 @@ header nav a.active {
 .pet-form button {
   width: 100%;
   padding: 10px;
-  background-color: 93563A;
-  /* color: #fff; */
   border: none;
-  border-radius: 3px;
   cursor: pointer;
   font-size: 18px;
+  background-color: #E75F5E;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 15px;
   
 }
 
 /* Hover effect for the button */
 .pet-form button:hover {
-  background-color: 93563A;
+  background-color: #93563A;
 }
 
 /* PET PROFILE */
@@ -446,8 +200,6 @@ header nav a.active {
   
   gap: 10px;
 }
-
-
 
 .pet-profile-image {
   width: 200px;
@@ -498,62 +250,6 @@ header nav a.active {
 }
 
 
-
-/* nav bar styling */
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-
-:root {
-  --primary: #F8A09B;
-  --secondary: #E75F5E;
-}
-body {
-  margin: 0;
-  background: #D3A884;
-} 
-
-/* * {
-  color: #fff;
-  margin: 0;
-}
-p {
-  margin: 20px 0;
-}
-button {
-  border: 0;
-  padding: 8px;
-  border-radius: 4px;
-  color: white;
-  background: var(--primary);
-  cursor: pointer;
-}
-
-/* navbar */
-header nav {
-  display: flex;
-  gap: 16px;
-  justify-content: end;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-header nav h1 {
-  margin-right: auto;
-
-}
-header nav a{
-  text-decoration: none;
-  padding: 6px;
-  border-radius: 4px;
-}
-header nav a.active {
-  background: var(--primary);
-}
-
-.grid-container {
-  display: flex;
-}
-
 /* PET MODAL */
 #modal-modal-description{
   text-align: justify;
@@ -581,4 +277,9 @@ header nav a.active {
   border-radius: 15px;
   text-transform: lowercase;
   
+}
+
+#modal-button:hover {
+  background-color: #93563A;
+
 }

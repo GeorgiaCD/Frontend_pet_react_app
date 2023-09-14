@@ -3,7 +3,7 @@ import './App.css';
 import PetContainer from './containers/PetContainer';
 import { BrowserRouter, Routes, Route, Link, NavLink } from "react-router-dom";
 import PetProfile from './components/PetProfile';
-import PetForm from './components/PetForm';
+
 import About from './components/About';
 import Adoption from './components/Adoption';
 
@@ -94,13 +94,12 @@ function App() {
 
 
   return (
-    <div className="application">
-    
     <div className="App">
     <BrowserRouter>
     <header>
+    <h1>Jonagotchi</h1>
+    
       <nav>
-        <h1>Virtual Pet</h1>
         <NavLink to="/">Home</NavLink>
         <NavLink to="about">About</NavLink>
         <NavLink to="adoption">Adoption</NavLink>
@@ -118,8 +117,8 @@ function App() {
         </BrowserRouter>
     </div>
     
-    {/* <img src = "/List_Images/TechTails.png" /> */}
-    </div>
+    // {/* <img src = "/List_Images/TechTails.png" /> */}
+
   );
 }
 export default App;

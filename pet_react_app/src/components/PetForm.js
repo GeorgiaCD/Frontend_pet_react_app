@@ -12,7 +12,7 @@ const PetForm = () => {
             <input type="text" id="toyIds" name="toysId"  placeholder="Toys" />
             <input type="text" id="foodsId" name="foodsId"  placeholder="Food" />
 
-            <button> Adopt pet</button>
+            <button>Adopt me!</button>
         </form>
     </>)
     
