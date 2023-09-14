@@ -31,7 +31,7 @@ const handleFeed = (petId) =>{
       <img className="pet-image" src={`pet_images/pet_${pet.species}1.gif`} ></img>
       <h3 className="pet-specie">{pet.species}</h3>
       
-      <div className="happiness-bar" >
+      <div className="bar" >
       <p className="happiness-bar-text">Happiness level: {pet.happinessLevel}/100</p>
       <div className="progress">
         <div
@@ -50,7 +50,7 @@ const handleFeed = (petId) =>{
       </div>
       </div>
 
-      <div className="energy-bar" >
+      <div className="bar" >
       <p className="energy-bar-text">Energy level: {pet.energyLevel}/100</p>
       <div className="progress">
         <div

@@ -34,8 +34,8 @@ function App() {
     useEffect( () => {
       
         fetchUserData()
-        setInterval(fetchUserData, 500)
-        setInterval(deadPetMessage,500)
+        setInterval(fetchUserData, 100000000)
+        setInterval(deadPetMessage,100000000)
 
     },[])
 
@@ -94,9 +94,10 @@ function App() {
 
 
   return (
-    <>
-    <BrowserRouter>
+    <div className="application">
+    
     <div className="App">
+    <BrowserRouter>
     <header>
       <nav>
         <h1>Virtual Pet</h1>
@@ -114,10 +115,11 @@ function App() {
           <Route path="about" element={<About />}></Route>
           <Route path="adoption" element={<Adoption />}></Route>
         </Routes>
+        </BrowserRouter>
     </div>
-    </BrowserRouter>
+    
     {/* <img src = "/List_Images/TechTails.png" /> */}
-    </>
+    </div>
   );
 }
 export default App;
