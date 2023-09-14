@@ -10,6 +10,8 @@ function App() {
   const [loggedInUser, setLoggedInUser] = useState(null);
   const [pets, setPets] = useState([]);
 
+
+
   const fetchUserData = async () => {
     const response = await fetch("http://localhost:8080/users/5");
     const data = await response.json();
@@ -18,12 +20,11 @@ function App() {
     setPets(data.pets)
 
   }
-
- 
-
+  
     useEffect( () => {
       
         fetchUserData()
+        setInterval(fetchUserData, 5000)
         
 
     },[])
