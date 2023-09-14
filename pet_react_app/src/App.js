@@ -105,7 +105,7 @@ function App() {
         <NavLink to="about">About</NavLink>
         <NavLink to="adoption">Adoption</NavLink>
       </nav>
-      <img id="banner-img" src='/banner.png'/>
+      {/* <img id="banner-img" src='/banner.png'/> */}
     </header>
     {deadPetMessage()}
 

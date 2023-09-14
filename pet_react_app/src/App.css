@@ -309,10 +309,6 @@ header nav a.active {
 }
  */
 
-
-
-
-
 .App {
   text-align: center;
   font-family: 'Gochi Hand', cursive;
@@ -332,6 +328,8 @@ header nav a.active {
     font-family: 'Gochi Hand', cursive;
 }
 
+/* PET */
+
 .pet{
   width: calc(33.33% - 20px); /* Set a fixed width for three books per row */
   margin: 0 0 20px; /* Adjust margin as needed */
@@ -344,8 +342,6 @@ header nav a.active {
   aspect-ratio: 1;
 
 }
-
-
 
 .pet-component{
   display: flex;
@@ -383,14 +379,27 @@ header nav a.active {
   border: #333;
 }
 
+#interact-link {
+  background-color: #E75F5E;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  color: white;
+  padding: 5px 5px;
+  text-decoration: none;
+  align-content: center;
+  cursor: pointer; 
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 15px;
 
+}
 
 /* Style the form container */
 .pet-form {
   max-width: 400px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f2f2f2;
+  background-color: #F8A09B;
   border-radius: 5px;
 }
 
@@ -398,7 +407,7 @@ header nav a.active {
 .form-title {
   text-align: center;
   font-size: 24px;
-  color: #333;
+  color: #5C4033;
   margin-bottom: 20px;
 }
 
@@ -415,38 +424,80 @@ header nav a.active {
 .pet-form button {
   width: 100%;
   padding: 10px;
-  background-color: #4caf50;
-  color: #fff;
+  background-color: 93563A;
+  /* color: #fff; */
   border: none;
   border-radius: 3px;
   cursor: pointer;
   font-size: 18px;
+  
 }
 
 /* Hover effect for the button */
 .pet-form button:hover {
-  background-color: #45a049;
+  background-color: 93563A;
+}
+
+/* PET PROFILE */
+
+#grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  
+  gap: 10px;
+}
+
+
+
+.pet-profile-image {
+  width: 200px;
+  /* aspect-ratio: 1; */
+
+}
+
+.toy-profile-list {
+  padding: 50px;
+  padding-top: 150px;
 }
 
 .toy-img{
-  width: 100px;
+  border-radius: 50px;
+  width: 50px;
   aspect-ratio: 1;
 }
 
-/* .toy-profile-list{
-  background-color: white;
-} */
+.toy-img:hover{
+  cursor: pointer;
+  box-shadow: 1px 1px 20px  #93563A;
+}
 
+.food-profile-list {
+  padding: 50px;
+  padding-top: 150px;
+}
 .food-img{
-  width: 100px;
+  border-radius: 50px;
+  width: 50px;
   aspect-ratio: 1;
 }
 
-.pet-profile-image {
-  width: 100px;
-  aspect-ratio: 1;
+.food-img:hover{
+  cursor: pointer;
+  box-shadow: 1px 1px 20px  #93563A;
+}
+
+#back-link{
+  background-color: #E75F5E;
+  color: white;
+  padding: 5px 5px;
+  text-decoration: none;
+  align-content: center;
+  cursor: pointer; 
+
 
 }
+
+
 
 /* nav bar styling */
 
@@ -503,6 +554,31 @@ header nav a.active {
   display: flex;
 }
 
-.application{
-  background-color: green;
+/* PET MODAL */
+#modal-modal-description{
+  text-align: justify;
+  align-content: center;
+  font-family: 'Gochi Hand', cursive;
+  font-size: large;
+}
+
+#modal-modal-title {
+  text-align: center;
+  font-family: 'Gochi Hand', cursive;
+  font-size: xx-large;
+
+
+}
+
+#petmodal-image {
+  align-items: center;
+  width: 100px;
+}
+
+#modal-button{
+  background-color: #E75F5E;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 15px;
+  text-transform: lowercase;
+  
 }

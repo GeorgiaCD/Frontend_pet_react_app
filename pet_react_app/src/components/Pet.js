@@ -70,7 +70,7 @@ const handleFeed = (petId) =>{
     </div>
 
       
-        <Link to={"/pet/"+pet.id}>Interact</Link>
+        <Link id="interact-link" to={"/pet/"+pet.id}>Interact</Link>
         <PetModal pet={pet} />
     </div>
     

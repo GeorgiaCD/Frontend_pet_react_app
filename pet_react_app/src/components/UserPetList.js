@@ -13,8 +13,14 @@ const UserPetList = ({pets, feedPet}) =>{
 
   
     return(
-        <div className="pet-component">
-        {petComponent}
+        <div className="user-pet-list">
+            <div className="banner">
+                <img id="banner-img" src='/banner.png'/>
+            </div>
+            <div className="pet-component">
+                {petComponent}
+            </div>
+            
         </div>
     )
 

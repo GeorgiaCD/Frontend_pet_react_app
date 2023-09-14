@@ -34,73 +34,84 @@ const PetProfile = ({pets, playPet, feedPet}) => {
      foundPet.energyLevel < 26 ? "red" : "#4caf50"; 
   
     return (
-      <div className="pet">
-        <h2 className="pet-name">{foundPet.name}</h2>
-        {/* <img className="pet-image" src={`pet_images/pet_${pet.species}1.gif`} ></img> */}
-        <img className= "pet-profile-image" src={`/pet_images/pet_${foundPet.species}2.gif`} ></img>
-        <h3 className="pet-specie">{foundPet.species}</h3>
-        
-        <div className="happiness-bar" >
-        <p className="happiness-bar-text">Happiness level: {foundPet.happinessLevel}/100</p>
-        <div className="progress">
-          <div
-            className="progress-bar"
-            role="progressbar"
-            style={{
-              width: `${foundPet.happinessLevel}%`,
-              backgroundColor: happinessBarColor, 
-            }}
-            aria-valuenow={foundPet.happinessLevel}
-            aria-valuemin="0"
-            aria-valuemax="100"
-          >
-            {foundPet.happinessLevel}
-          </div>
-        </div>
-        </div>
-  
-        <div className="energy-bar" >
-        <p className="energy-bar-text">Energy level: {foundPet.energyLevel}/100</p>
-        <div className="progress">
-          <div
-            className="progress-bar"
-            role="progressbar"
-            style={{
-              width: `${foundPet.energyLevel}%`,
-              backgroundColor: energyBarColor,
-            }}
-            aria-valuenow={foundPet.energyLevel}
-            aria-valuemin="0"
-            aria-valuemax="100"
-          >
-            {foundPet.energyLevel}
-          </div>
-        </div>
-      </div>
-
-      <div className="toy-profile-list">
+      <div id="pet-profile-container">
+      <div id="grid-container">
+        <div className="toy-profile-list">
           <ul>
               <h3 className="list-title">Toys</h3>
               {foundPet.toys.map((toy, index) => (
                 <div key={index}>
-                  <img className="toy-img" src ={`/List_Images/toy_${toy.name}.png`} ></img>
+                  <img className="toy-img" src ={`/List_Images/toy_${toy.name}.png`} onClick={() => handlePlay(foundPet.id)}></img>
                   {toy.name} - {toy.happinessValue}</div>
               ))}
           </ul>
-      </div>
+        </div>
+        <div className="pet-status">
+        <div className="pet-profile">
+          <h2 className="pet-name">{foundPet.name}</h2>
+          <img className= "pet-profile-image" src={`/pet_images/pet_${foundPet.species}2.gif`} ></img>
+          <h3 className="pet-specie">{foundPet.species}</h3>
+        </div>
+    
+        <div className="status">
+          <div className="happiness-bar" >
+            <p className="happiness-bar-text">Happiness level: {foundPet.happinessLevel}/100</p>
+            <div className="progress">
+              <div className="progress-bar"
+              role="progressbar"
+              style={{
+              width: `${foundPet.happinessLevel}%`,
+              backgroundColor: happinessBarColor, 
+              }}
+              aria-valuenow={foundPet.happinessLevel}
+              aria-valuemin="0"
+              aria-valuemax="100"
+              > 
+              {foundPet.happinessLevel}
+              </div>
+            </div>
+          </div>
+  
+          <div className="energy-bar" >
+            <p className="energy-bar-text">Energy level: {foundPet.energyLevel}/100</p>
+            <div className="progress">
+              <div className="progress-bar"
+                role="progressbar"
+                style={{
+                width: `${foundPet.energyLevel}%`,
+                backgroundColor: energyBarColor,
+                }}
+                aria-valuenow={foundPet.energyLevel}
+                aria-valuemin="0"
+                aria-valuemax="100"
+                >
+                {foundPet.energyLevel}
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+
+        <div className="food-profile-list">
           <ul>
               <h3>Foods</h3>
               {foundPet.foods.map((food, index) => (
                 <div key={index}>
-                  <img className="food-img" src ={`/List_Images/food_${food.name}.png`} ></img>
+                  <img className="food-img" src ={`/List_Images/food_${food.name}.png`} onClick={() => handleFeed(foundPet.id)} ></img>
                   {food.name} - {food.nutritionValue}</div>
               ))}
           </ul>
          
-          <button onClick={() => handlePlay(foundPet.id)}>Play me</button>
-          <button onClick={() => handleFeed(foundPet.id)}>Feed me</button>
-          <Link to={"/"}>Back</Link>
+          
+          
+          
+          
+        </div>
+        
       </div>
+      <Link id="back-link"  to={"/"}>Back</Link>
+      </div>
+      
       
     );
   };
