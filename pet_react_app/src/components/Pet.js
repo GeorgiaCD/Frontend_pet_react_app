@@ -1,4 +1,5 @@
 import {Link} from "react-router-dom";
+import PetModal from "./PetModal";
 
 const Pet = ({pet, feedPet}) => {
   if (!pet) {
@@ -70,6 +71,7 @@ const handleFeed = (petId) =>{
 
       
         <Link to={"/pet/"+pet.id}>Interact</Link>
+        <PetModal pet={pet} />
     </div>
     
   );
