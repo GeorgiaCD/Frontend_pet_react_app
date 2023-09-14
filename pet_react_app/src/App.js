@@ -107,7 +107,7 @@ function App() {
         </Routes>
     </div>
     </BrowserRouter>
-    {/* <PetForm /> */}
+    <img src = "/List_Images/TechTails.png" />
     </>
   );
 }
