@@ -20,12 +20,20 @@ function App() {
     setPets(data.pets)
 
   }
+
+  const deadPetMessage = () => {
+    if (pets==[]) {
+      return <p>Pets have died</p>;
+    }
+    else {return <p>All pets are healthy</p>}
+  }
+
   
     useEffect( () => {
       
         fetchUserData()
-        setInterval(fetchUserData, 5000)
-        
+        setInterval(fetchUserData, 500)
+        setInterval(deadPetMessage,500)
 
     },[])
 
@@ -80,7 +88,7 @@ function App() {
            updatePet(data.body);
            } 
 
-
+     
 
 
   return (
@@ -91,6 +99,7 @@ function App() {
     <div className="App">
         {/* <NavLink to="/">Home</NavLink> */}
         <h1>Pets!</h1>
+        <p>{deadPetMessage}</p>
         {/* <img src = "/cat.gif" /> */}
         <Routes>
           <Route index element={<PetContainer playPet={playPet} feedPet={feedPet} loggedInUser={loggedInUser} pets={pets}/>}></Route>
