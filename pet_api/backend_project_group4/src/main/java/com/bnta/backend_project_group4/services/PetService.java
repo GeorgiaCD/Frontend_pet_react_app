@@ -92,7 +92,7 @@ public class PetService {
         petRepository.save(petBeingFed);
     }
 
-    @Scheduled(fixedRate = 100000000) //note: 15000 = 15 seconds
+    @Scheduled(fixedRate = 5000) //note: 15000 = 15 seconds  100000000
     public void autoDecrease() {
         for (Pet petDecreasing : petRepository.findAll()) {
             petDecreasing.setEnergyLevel(petDecreasing.getEnergyLevel() - 2);

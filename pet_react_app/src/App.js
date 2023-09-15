@@ -1,12 +1,11 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import PetContainer from './containers/PetContainer';
-import { BrowserRouter, Routes, Route, Link, NavLink, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link, NavLink } from "react-router-dom";
 import PetProfile from './components/PetProfile';
 
 import About from './components/About';
 import Adoption from './components/Adoption';
-import { AnimatePresence } from 'framer-motion';
 
 function App() {
 
@@ -35,8 +34,8 @@ function App() {
     useEffect( () => {
       
         fetchUserData()
-        setInterval(fetchUserData, 100000000)
-        setInterval(deadPetMessage,100000000)
+        setInterval(fetchUserData, 5000)
+        setInterval(deadPetMessage,5000)
 
     },[])
 

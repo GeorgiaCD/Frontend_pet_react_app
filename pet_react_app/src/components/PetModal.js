@@ -35,12 +35,12 @@ export default function PetModal({pet}) {
     } else if (pet.species==="CAT") {
       return (
       <div id="petmodal">
-        <p>{pet.name} is a curious and independent feline companion. She has a knack for finding hidden treasures in the virtual world and is often seen playfully pouncing on virtual shadows. Giggles enjoys lounging in cozy corners and gazing out of virtual windows, but most of all she loves getting glam and her bedtime routine.</p>
+        <p>{pet.name} is a curious and independent feline companion. She has a knack for finding hidden treasures in the virtual world and is often seen playfully pouncing on virtual shadows. Tomcat enjoys lounging in cozy corners and gazing out of virtual windows, but most of all she loves getting glam and her bedtime routine.</p>
       </div>) 
     } else if (pet.species==="BEAR") {
       return (
         <div id="petmodal">
-          <p>{pet.name} is a lovable and huggable teddy bear with a heart as big as his fuzzy exterior. He exudes warmth and comfort, making him the perfect virtual friend for cozy nights and comforting chats. With a reassuring presence and a penchant for soothing virtual stories, Baloo is the guardian angel of the virtual pet world.</p>
+          <p>{pet.name} is a lovable and huggable teddy bear with a heart as big as his fuzzy exterior. He exudes warmth and comfort, making him the perfect virtual friend for cozy nights and comforting chats. With a reassuring presence and a penchant for soothing virtual stories, Tarek is the guardian angel of the virtual pet world.</p>
         </div>
       
       )
