@@ -2,7 +2,7 @@ import AnimatedPage from "../AnimatedPage"
 
 export default function About() {
     return (
-      <AnimatedPage>
+    
       <div className="about">
         <img id="banner-img" src='/banner.png'/>
         <div className="about-main">
@@ -15,6 +15,6 @@ export default function About() {
           </div>
           </div>
       </div>
-      </AnimatedPage>
+  
     )
   }

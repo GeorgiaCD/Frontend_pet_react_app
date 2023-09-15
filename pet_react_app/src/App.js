@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import PetContainer from './containers/PetContainer';
-import { BrowserRouter, Routes, Route, Link, NavLink } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link, NavLink, useLocation } from "react-router-dom";
 import PetProfile from './components/PetProfile';
 
 import About from './components/About';
 import Adoption from './components/Adoption';
+import { AnimatePresence } from 'framer-motion';
 
 function App() {
 
@@ -88,11 +89,12 @@ function App() {
            const data = await response.json()
                console.log("data: ", data);
            updatePet(data.body);
-           } 
+           }
+
 
      
 
-
+  
   return (
     <div className="App">
       <BrowserRouter>
@@ -106,7 +108,8 @@ function App() {
           {/* <img id="banner-img" src='/banner.png'/> */}
         </header>
         <div>{deadPetMessage()}</div>
-        <div>
+        <div className="routes">
+          
           <Routes>
             <Route index element={<PetContainer playPet={playPet} feedPet={feedPet} loggedInUser={loggedInUser} pets={pets}/>}></Route>
             <Route path='/pet/:id' element={<PetProfile  playPet={playPet} feedPet={feedPet} pets={pets} />}></Route>
