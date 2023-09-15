@@ -1,38 +1,422 @@
 .App {
   text-align: center;
+  font-family: 'Gochi Hand', cursive;
+  color: #5C4033;
+  /* background: #D3A884; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#banner-img {
+  background-size: cover;
+  background-repeat: no-repeat;   
+  background-position: center;
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#virtual-pet-title {
+  font-family: 'Gochi Hand', cursive;
+  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+header{
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display:flex;
+  justify-content: space-between;
   align-items: center;
+}
+
+header h1{
+  font-size: 5em;
+  letter-spacing: 2px;
+
+}
+
+/* nav bar styling */
+:root {
+  --primary: #F8A09B;
+  --secondary: #E75F5E;
+}
+
+/* navbar */
+header nav {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  gap: 16px;
+}
+
+header nav a{
+  text-decoration: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  color: #5C4033;
+  font-size: 20px;
+
+}
+
+header nav a:hover{
+  background-color: #93563A;
   color: white;
+  
+
 }
 
-.App-link {
-  color: #61dafb;
+
+header nav a.active {
+  background: var(--primary);
+  color: #5C4033;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* PET CONTAINER */
+
+.pet-container{
+  background: #D3A884;
 }
+
+.routes {
+  padding-bottom: 100px;
+  background-color: #D3A884;
+  
+}
+
+
+
+.grid-container {
+  display: flex;
+}
+
+/* PET */
+
+.pet{
+  width: calc(33.33% - 20px); /* Set a fixed width for three books per row */
+  margin: 0 0 20px; /* Adjust margin as needed */
+  padding: 10px;
+  border: #333;
+}
+
+.pet-image {
+  width: 200px;
+  aspect-ratio: 1;
+
+}
+
+.pet-component{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+
+}
+
+.pet-links{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content:space-evenly;
+  margin-top: 20px;
+}
+
+/* Pet health bars */
+.progress {
+  height: 25px !important ;
+  font-size: 20px;
+  width: 200px;
+  background-color: #FFF2E7;
+  border-radius: 4px;
+  margin-top: 10px;
+  align-items: baseline;
+  margin-left: auto;
+  margin-right: auto;
+}
+ 
+.bar{
+  padding: 10px;
+ 
+  
+}
+
+
+.progress-bar {
+  height: 100%;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 20px;
+  color: white;
+  font-weight: bold;
+  /* margin: 0 0 20px; Adjust margin as needed */
+  padding: 10px;
+  border: #333;
+  font-size: 18px;
+
+}
+
+
+
+#interact-link {
+  background-color: #E75F5E;
+  cursor: pointer;
+  color: white;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-decoration: none;
+  align-content: center;
+  cursor: pointer; 
+  font-family: 'Gochi Hand', cursive;
+  border-radius: 15px;
+  font-size: 20px;
+}
+
+#interact-link:hover {
+  background-color: #93563A;
+
+
+}
+
+.bar-title-text{
+  font-size: 30px;
+}
+
+
+/* PET FORM */
+
+/* Style the form container */
+.pet-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #F8A09B;
+  border-radius: 20px;
+  
+}
+
+/* Style the form title */
+.form-title {
+  text-align: center;
+  font-size: 24px;
+  color: #5C4033;
+  margin-bottom: 20px;
+}
+
+/* Style the input fields */
+.pet-form input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+/* Style the button */
+.pet-form button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  background-color: #E75F5E;
+  color: white;
+  font-family: 'Gochi Hand', cursive;
+  border-radius: 15px;
+  
+  
+}
+
+/* Hover effect for the button */
+.pet-form button:hover {
+  background-color: #93563A;
+}
+
+/* PET PROFILE */
+
+.pet-profile-container{
+  background-color: #D3A884;
+  padding: 100px;
+  padding-top: 200px;
+  padding-bottom: 30px;
+  
+  
+}
+
+.pet-profile-link{
+  padding: 50px;
+}
+
+#grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+  
+
+}
+
+.pet-profile-image {
+  width: 300px;
+  /* aspect-ratio: 1; */
+
+}
+
+.list-title {
+  font-size: 50px;
+}
+
+.pet-profile-name{
+  font-size: 80px;
+
+}
+
+.side-list {
+  font-size: 27px;
+}
+
+.bar-text-profile{
+  font-size: 30px;
+}
+
+.toy-profile-list {
+  padding: 50px;
+  padding-top: 150px;
+}
+
+.toy-img{
+  border-radius: 50px;
+  width: 70px;
+  margin: 15px;
+  
+  aspect-ratio: 1;
+}
+
+.toy-img:hover{
+  cursor: pointer;
+  box-shadow: 1px 1px 20px  #93563A;
+}
+
+.food-profile-list {
+  padding: 50px;
+  padding-top: 150px;
+}
+.food-img{
+  border-radius: 50px;
+  width: 70px;
+  margin: 15px;
+
+  aspect-ratio: 1;
+}
+
+.food-img:hover{
+  cursor: pointer;
+  box-shadow: 1px 1px 20px  #93563A;
+}
+
+#back-link{
+  background-color: #E75F5E;
+  cursor: pointer;
+  color: white;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-decoration: none;
+  align-content: center;
+  cursor: pointer; 
+  font-family: 'Gochi Hand', cursive;
+  border-radius: 15px;
+  font-size: 20px;
+}
+
+
+/* PET MODAL */
+#modal-modal-description{
+  text-align: justify;
+  align-content: center;
+  font-family: 'Gochi Hand', cursive;
+  font-size: large;
+}
+
+#modal-modal-title {
+  text-align: center;
+  font-family: 'Gochi Hand', cursive;
+  font-size: xx-large;
+
+
+}
+
+#petmodal-image {
+  align-items: center;
+  width: 100px;
+}
+
+#modal-button{
+  background-color: #E75F5E;
+  font-family: 'Gochi Hand', cursive;
+  border-radius: 15px;
+  text-transform: lowercase;
+  font-size: 20px;
+  
+}
+
+#modal-button:hover {
+  background-color: #93563A;
+
+}
+
+/* ABOUT */
+
+.about{
+  width: 100%;
+  padding: 78px 0px;
+  background-color: #FFF2E7;
+}
+
+#about-image{
+  height: auto;
+  width: 420px;
+}
+
+.about-text{
+  width: 550px;
+}
+
+.about-main{
+  width: 1130 px;
+  max-width: 95%;
+  margin: 30px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around; 
+}
+
+.about h1{
+  font-size: 60px;
+  text-transform: capitalize;
+
+}
+
+.about h4{
+  font-size: 25px;
+  text-transform: capitalize;
+ 
+}
+
+/* ADOPTION */
+.adoption{
+  background: #D3A884;
+}
+.adoption-petform{
+  width: 1130 px;
+  max-width: 95%;
+  margin: 0;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  
+  /* justify-content: flex-end;  */
+}
+
+.adoption h4{
+  font-size: 50px;
+  
+ 
+}
+

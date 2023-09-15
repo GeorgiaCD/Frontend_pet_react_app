@@ -50,7 +50,7 @@ public class DataLoader implements ApplicationRunner {
 
         // pets
 
-        Pet pet1 = new Pet("Khaleesi", Species.DRAGON, user1);
+        Pet pet1 = new Pet("Khaleesi", Species.BEAR, user1);
         user1.addPet(pet1);
         petRepository.save(pet1);
 
@@ -58,7 +58,7 @@ public class DataLoader implements ApplicationRunner {
         user2.addPet(pet2);
         petRepository.save(pet2);
 
-        Pet pet3 = new Pet("Sesame", Species.RAT, user3);
+        Pet pet3 = new Pet("Sesame", Species.BUNNY, user3);
         user3.addPet(pet3);
         petRepository.save(pet3);
 
@@ -66,7 +66,7 @@ public class DataLoader implements ApplicationRunner {
         user4.addPet(pet4);
         petRepository.save(pet4);
 
-        Pet pet5 = new Pet("Drogon", Species.DRAGON, user5);
+        Pet pet5 = new Pet("Drogon", Species.BEAR, user5);
         user5.addPet(pet5);
         petRepository.save(pet5);
 
@@ -74,7 +74,7 @@ public class DataLoader implements ApplicationRunner {
         user5.addPet(pet6);
         petRepository.save(pet6);
 
-        Pet pet7 = new Pet("Peach", Species.RAT, user5);
+        Pet pet7 = new Pet("Peach", Species.BUNNY, user5);
         user5.addPet(pet7);
         petRepository.save(pet7);
 
