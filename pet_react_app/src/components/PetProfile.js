@@ -34,7 +34,7 @@ const PetProfile = ({pets, playPet, feedPet}) => {
      foundPet.energyLevel < 26 ? "red" : "#4caf50"; 
   
     return (
-      <div id="pet-profile-container">
+      <div className="pet-profile-container">
       <div id="grid-container">
         <div className="toy-profile-list">
           <ul>
@@ -109,7 +109,9 @@ const PetProfile = ({pets, playPet, feedPet}) => {
         </div>
         
       </div>
+      <div className="pet-profile-link">
       <Link id="back-link"  to={"/"}>Back</Link>
+      </div>
       </div>
       
       

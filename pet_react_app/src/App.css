@@ -2,7 +2,7 @@
   text-align: center;
   font-family: 'Gochi Hand', cursive;
   color: #5C4033;
-  background: #D3A884;
+  /* background: #D3A884; */
 }
 
 #banner-img {
@@ -70,6 +70,14 @@ header nav a.active {
   color: #5C4033;
 }
 
+/* PET CONTAINER */
+
+.pet-container{
+  background: #D3A884;
+}
+
+
+
 .grid-container {
   display: flex;
 }
@@ -96,6 +104,13 @@ header nav a.active {
 
 }
 
+.pet-links{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content:space-evenly;
+}
+
 /* Pet health bars */
 .progress {
   height: 20px;
@@ -110,6 +125,12 @@ header nav a.active {
  
 .bar{
   padding: 10px;
+  
+}
+
+.bar p{
+  font-size: 20px;
+  
 }
 
 .progress-bar {
@@ -124,6 +145,8 @@ header nav a.active {
   border: #333;
 }
 
+
+
 #interact-link {
   background-color: #E75F5E;
   cursor: pointer;
@@ -134,8 +157,9 @@ header nav a.active {
   text-decoration: none;
   align-content: center;
   cursor: pointer; 
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Gochi Hand', cursive;
   border-radius: 15px;
+  font-size: 20px;
 }
 
 #interact-link:hover {
@@ -145,7 +169,7 @@ header nav a.active {
 }
 
 
-/* FORM */
+/* PET FORM */
 
 /* Style the form container */
 .pet-form {
@@ -182,8 +206,9 @@ header nav a.active {
   font-size: 18px;
   background-color: #E75F5E;
   color: white;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Gochi Hand', cursive;
   border-radius: 15px;
+  
   
 }
 
@@ -194,11 +219,23 @@ header nav a.active {
 
 /* PET PROFILE */
 
+.pet-profile-container{
+  background-color: #D3A884;
+  padding: 100px;
+  padding-top: 200px;
+  
+}
+
+.pet-profile-link{
+  padding: 50px;
+}
+
 #grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
-  
   gap: 10px;
+  
+
 }
 
 .pet-profile-image {
@@ -240,13 +277,17 @@ header nav a.active {
 
 #back-link{
   background-color: #E75F5E;
+  cursor: pointer;
   color: white;
-  padding: 5px 5px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
   text-decoration: none;
   align-content: center;
   cursor: pointer; 
-
-
+  font-family: 'Gochi Hand', cursive;
+  border-radius: 15px;
+  font-size: 20px;
 }
 
 
@@ -273,9 +314,10 @@ header nav a.active {
 
 #modal-button{
   background-color: #E75F5E;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Gochi Hand', cursive;
   border-radius: 15px;
   text-transform: lowercase;
+  font-size: 20px;
   
 }
 
@@ -283,3 +325,63 @@ header nav a.active {
   background-color: #93563A;
 
 }
+
+/* ABOUT */
+
+.about{
+  width: 100%;
+  padding: 78px 0px;
+  background-color: #FFF2E7;
+}
+
+#about-image{
+  height: auto;
+  width: 420px;
+}
+
+.about-text{
+  width: 550px;
+}
+
+.about-main{
+  width: 1130 px;
+  max-width: 95%;
+  margin: 30px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around; 
+}
+
+.about h1{
+  font-size: 60px;
+  text-transform: capitalize;
+
+}
+
+.about h4{
+  font-size: 25px;
+  text-transform: capitalize;
+ 
+}
+
+/* ADOPTION */
+.adoption{
+  background: #D3A884;
+}
+.adoption-petform{
+  width: 1130 px;
+  max-width: 95%;
+  margin: 0;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  
+  /* justify-content: flex-end;  */
+}
+
+.adoption h4{
+  font-size: 50px;
+  
+ 
+}
+

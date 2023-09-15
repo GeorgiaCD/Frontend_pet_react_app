@@ -95,29 +95,29 @@ function App() {
 
   return (
     <div className="App">
-    <BrowserRouter>
-    <header>
-    <h1>Jonagotchi</h1>
-    
-      <nav>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="about">About</NavLink>
-        <NavLink to="adoption">Adoption</NavLink>
-      </nav>
-      {/* <img id="banner-img" src='/banner.png'/> */}
-    </header>
-    {deadPetMessage()}
-
-        <Routes>
-          <Route index element={<PetContainer playPet={playPet} feedPet={feedPet} loggedInUser={loggedInUser} pets={pets}/>}></Route>
-          <Route path='/pet/:id' element={<PetProfile  playPet={playPet} feedPet={feedPet} pets={pets} />}></Route>
-          <Route path="about" element={<About />}></Route>
-          <Route path="adoption" element={<Adoption />}></Route>
-        </Routes>
+      <BrowserRouter>
+        <header>
+        <h1>Jonagotchi</h1>
+          <nav>
+            <NavLink to="/">Home</NavLink>
+            <NavLink to="about">About</NavLink>
+            <NavLink to="adoption">Adoption</NavLink>
+          </nav>
+          {/* <img id="banner-img" src='/banner.png'/> */}
+        </header>
+        <div>{deadPetMessage()}</div>
+        <div>
+          <Routes>
+            <Route index element={<PetContainer playPet={playPet} feedPet={feedPet} loggedInUser={loggedInUser} pets={pets}/>}></Route>
+            <Route path='/pet/:id' element={<PetProfile  playPet={playPet} feedPet={feedPet} pets={pets} />}></Route>
+            <Route path="about" element={<About />}></Route>
+            <Route path="adoption" element={<Adoption />}></Route>
+          </Routes>
+        </div>
         </BrowserRouter>
     </div>
     
-    // {/* <img src = "/List_Images/TechTails.png" /> */}
+    
 
   );
 }

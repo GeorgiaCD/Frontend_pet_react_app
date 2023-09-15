@@ -68,10 +68,10 @@ const handleFeed = (petId) =>{
         </div>
       </div>
     </div>
-
-      
+      <div className="pet-links">
         <Link id="interact-link" to={"/pet/"+pet.id}>Interact</Link>
         <PetModal pet={pet} />
+      </div>
     </div>
     
   );

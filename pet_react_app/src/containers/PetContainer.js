@@ -7,7 +7,9 @@ import PetForm from "../components/PetForm";
 const PetContainer = ({loggedInUser, pets, feedPet, playPet}) => {
 
 
-   return(<>
+   return(
+   
+   <div className="pet-container">
 
         {
             loggedInUser
@@ -16,7 +18,8 @@ const PetContainer = ({loggedInUser, pets, feedPet, playPet}) => {
         }
         <PetForm />
         
-   </>)
+   </div>
+   )
 
 
 
