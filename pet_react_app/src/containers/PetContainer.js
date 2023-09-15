@@ -16,7 +16,7 @@ const PetContainer = ({loggedInUser, pets, feedPet, playPet}) => {
             ? (<UserPetList  playPet={playPet} feedPet={feedPet} pets={pets} />) 
             : (<p>Loading...</p>)
         }
-        <PetForm />
+        {/* <PetForm /> */}
         
    </div>
    )

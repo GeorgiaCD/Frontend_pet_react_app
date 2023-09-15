@@ -32,8 +32,8 @@ const handleFeed = (petId) =>{
       <h3 className="pet-specie">{pet.species}</h3>
       
       <div className="bar" >
-      <p className="happiness-bar-text">Happiness level: {pet.happinessLevel}/100</p>
-      <div className="progress">
+        <p className="bar-title-text">Happiness level: {pet.happinessLevel}/100</p>
+        <div className="progress">
         <div
           className="progress-bar"
           role="progressbar"
@@ -51,7 +51,7 @@ const handleFeed = (petId) =>{
       </div>
 
       <div className="bar" >
-      <p className="energy-bar-text">Energy level: {pet.energyLevel}/100</p>
+      <p className="bar-title-text">Energy level: {pet.energyLevel}/100</p>
       <div className="progress">
         <div
           className="progress-bar"

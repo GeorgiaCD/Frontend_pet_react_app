@@ -76,6 +76,12 @@ header nav a.active {
   background: #D3A884;
 }
 
+.routes {
+  padding-bottom: 100px;
+  background-color: #D3A884;
+  
+}
+
 
 
 .grid-container {
@@ -92,7 +98,7 @@ header nav a.active {
 }
 
 .pet-image {
-  width: 100px;
+  width: 200px;
   aspect-ratio: 1;
 
 }
@@ -109,29 +115,28 @@ header nav a.active {
   flex-direction: row;
   align-content: center;
   justify-content:space-evenly;
+  margin-top: 20px;
 }
 
 /* Pet health bars */
 .progress {
-  height: 20px;
-  font-size: 15px;
+  height: 25px !important ;
+  font-size: 20px;
   width: 200px;
   background-color: #FFF2E7;
   border-radius: 4px;
   margin-top: 10px;
   align-items: baseline;
-  margin-left: 80px;
+  margin-left: auto;
+  margin-right: auto;
 }
  
 .bar{
   padding: 10px;
+ 
   
 }
 
-.bar p{
-  font-size: 20px;
-  
-}
 
 .progress-bar {
   height: 100%;
@@ -140,9 +145,11 @@ header nav a.active {
   line-height: 20px;
   color: white;
   font-weight: bold;
-  margin: 0 0 20px; /* Adjust margin as needed */
+  /* margin: 0 0 20px; Adjust margin as needed */
   padding: 10px;
   border: #333;
+  font-size: 18px;
+
 }
 
 
@@ -168,6 +175,10 @@ header nav a.active {
 
 }
 
+.bar-title-text{
+  font-size: 30px;
+}
+
 
 /* PET FORM */
 
@@ -177,7 +188,8 @@ header nav a.active {
   margin: 0 auto;
   padding: 20px;
   background-color: #F8A09B;
-  border-radius: 5px;
+  border-radius: 20px;
+  
 }
 
 /* Style the form title */
@@ -223,6 +235,8 @@ header nav a.active {
   background-color: #D3A884;
   padding: 100px;
   padding-top: 200px;
+  padding-bottom: 30px;
+  
   
 }
 
@@ -239,9 +253,26 @@ header nav a.active {
 }
 
 .pet-profile-image {
-  width: 200px;
+  width: 300px;
   /* aspect-ratio: 1; */
 
+}
+
+.list-title {
+  font-size: 50px;
+}
+
+.pet-profile-name{
+  font-size: 80px;
+
+}
+
+.side-list {
+  font-size: 27px;
+}
+
+.bar-text-profile{
+  font-size: 30px;
 }
 
 .toy-profile-list {
@@ -251,7 +282,9 @@ header nav a.active {
 
 .toy-img{
   border-radius: 50px;
-  width: 50px;
+  width: 70px;
+  margin: 15px;
+  
   aspect-ratio: 1;
 }
 
@@ -266,7 +299,9 @@ header nav a.active {
 }
 .food-img{
   border-radius: 50px;
-  width: 50px;
+  width: 70px;
+  margin: 15px;
+
   aspect-ratio: 1;
 }
 

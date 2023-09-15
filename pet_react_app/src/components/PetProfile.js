@@ -40,22 +40,23 @@ const PetProfile = ({pets, playPet, feedPet}) => {
           <ul>
               <h3 className="list-title">Toys</h3>
               {foundPet.toys.map((toy, index) => (
-                <div key={index}>
+                <div className="side-list" key={index}>
                   <img className="toy-img" src ={`/List_Images/toy_${toy.name}.png`} onClick={() => handlePlay(foundPet.id)}></img>
-                  {toy.name} - {toy.happinessValue}</div>
+                  
+                  </div>
               ))}
           </ul>
         </div>
         <div className="pet-status">
         <div className="pet-profile">
-          <h2 className="pet-name">{foundPet.name}</h2>
+          <h2 className="pet-profile-name">{foundPet.name}</h2>
           <img className= "pet-profile-image" src={`/pet_images/pet_${foundPet.species}2.gif`} ></img>
           <h3 className="pet-specie">{foundPet.species}</h3>
         </div>
     
         <div className="status">
           <div className="happiness-bar" >
-            <p className="happiness-bar-text">Happiness level: {foundPet.happinessLevel}/100</p>
+            <p className="bar-text-profile">Happiness level: {foundPet.happinessLevel}/100</p>
             <div className="progress">
               <div className="progress-bar"
               role="progressbar"
@@ -73,7 +74,7 @@ const PetProfile = ({pets, playPet, feedPet}) => {
           </div>
   
           <div className="energy-bar" >
-            <p className="energy-bar-text">Energy level: {foundPet.energyLevel}/100</p>
+            <p className="bar-text-profile">Energy level: {foundPet.energyLevel}/100</p>
             <div className="progress">
               <div className="progress-bar"
                 role="progressbar"
@@ -94,11 +95,11 @@ const PetProfile = ({pets, playPet, feedPet}) => {
 
         <div className="food-profile-list">
           <ul>
-              <h3>Foods</h3>
+              <h3 className="list-title">Foods</h3>
               {foundPet.foods.map((food, index) => (
-                <div key={index}>
+                <div className= "side-list" key={index}>
                   <img className="food-img" src ={`/List_Images/food_${food.name}.png`} onClick={() => handleFeed(foundPet.id)} ></img>
-                  {food.name} - {food.nutritionValue}</div>
+                  </div>
               ))}
           </ul>
          
